@@ -13,8 +13,16 @@ public class Cube : MonoBehaviour
 
     void Update()
     {
-        // transform.position = needPosition; // Временно
+        transform.position = needPosition; // Временно
     }
 
+    public void SetNeedPosition(Vector3Int newNeedPosition)
+    {
+        needPosition = newNeedPosition;
+    }
 
+    public void AddNeedPosition(Vector3Int shiftVector)
+    {
+        needPosition += shiftVector;
+    }
 }
