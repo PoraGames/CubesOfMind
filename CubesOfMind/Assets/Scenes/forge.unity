@@ -2352,6 +2352,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b4947c9ea26ab34a90561eff567ce81, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &738685987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 738685988}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738685988
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 738685987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.9473085, y: -0.11812115, z: 4.052397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &739189541 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4040087609154892, guid: 6b4947c9ea26ab34a90561eff567ce81,
@@ -4127,6 +4155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9bf14847f29464dbf0cbb5818442ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rootForMap: {fileID: 738685988}
   cubePrefab: {fileID: 1741699167581416, guid: 44ffce4264839624eb0193f5a12cf4f4, type: 2}
   mapSize: {x: 11, y: 3, z: 11}
 --- !u!4 &1207802054

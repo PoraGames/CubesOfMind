@@ -5,6 +5,7 @@ using UnityEngine;
 public class Map : MonoBehaviour
 {
     #region VARIABLES
+    public Transform rootForMap;
     public GameObject cubePrefab;
     public Vector3Int mapSize;
 
@@ -36,11 +37,27 @@ public class Map : MonoBehaviour
                 {
                     int r = Random.Range(0, 10);
                     if (r == 4)
-                        mapCubes[x, y, z] =
-                            Instantiate(cubePrefab, new Vector3(x, y, z), Quaternion.identity).GetComponent<Cube>();
+                        CreateCube(new Vector3Int(x, y, z));
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Создание нового куба и регистрация в массиве
+    /// </summary>
+    void CreateCube(Vector3Int positionForCreate)
+    {
+        // Создание
+        GameObject obj = Instantiate(cubePrefab,
+                new Vector3(positionForCreate.x, positionForCreate.y, positionForCreate.z),
+                Quaternion.identity);
+
+        // Привязка к корню карты
+        obj.transform.SetParent(rootForMap);
+
+        // Регистрация в массиве
+        mapCubes[positionForCreate.x, positionForCreate.y, positionForCreate.z] = obj.GetComponent<Cube>();
     }
 
     /// <summary>
